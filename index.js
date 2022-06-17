@@ -8,7 +8,6 @@ function openMenu () {
   hamburgerMenu.classList.toggle('show-menu')
   hamburgerMenu.focus()
   hamburgerBtn.getAttribute('aria-expanded', true)
-  hamburgerBtn.setAttribute('aria-expanded', false)
 }
 
 function closeMenu () {
