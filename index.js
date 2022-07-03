@@ -7,13 +7,15 @@ var footer = document.querySelector('footer')
 function openMenu () {
   hamburgerMenu.classList.toggle('show-menu')
   hamburgerMenu.focus()
-  hamburgerBtn.getAttribute('aria-expanded', true)
+  if(hamburgerMenu.classList.contains('show-menu')){hamburgerBtn.setAttribute('aria-expanded', true)
+  } else {
+  hamburgerBtn.setAttribute('aria-expanded', false)
+  }
 }
 
 function closeMenu () {
   hamburgerMenu.classList.remove('show-menu')
   hamburgerBtn.focus()
-  hamburgerBtn.setAttribute('aria-expanded', false)
 }
 
 hamburgerBtn.onclick = openMenu
